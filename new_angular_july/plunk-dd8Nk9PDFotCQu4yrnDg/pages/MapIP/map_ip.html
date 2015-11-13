@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Geo IP Mapper</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="map_ip.css" type="text/css" />
+    <link href='http://fonts.googleapis.com/css?family=Lato:100' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Play' rel='stylesheet' type='text/css'>
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	
+	<script src="getPos.js"></script>
+	
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCZ50JlYiBUMuLVpnJB4ZLLOFfjuK4gSTs"></script>
+	<script src="getMap.js"></script>	
+	
+	<script>
+        var ips = GetUrlValue('ip');
+        for(var i = 0; i < ips.length; i++){
+                var currentSRC = "http://geoip.nekudo.com/api/";
+        currentSRC = currentSRC.concat(ips[i]);
+        currentSRC = currentSRC.concat("?callback=foo");
+        $.getScript(currentSRC);
+
+        }
+    
+	</script>
+	
+	<script>
+	$(window).load(function(){
+				
+				$(".title").delay(800).animate({opacity:'1'},"slow");
+			});
+	</script>
+	
+	<script>
+	$(window).load(function() {  
+		$("#loading").fadeOut("slow");
+	});
+	</script>
+
+	
+	
+
+
+</head>
+
+<body>
+
+<div id="loading">
+		Loading
+		<div class="loading_out">
+			<div class="loading_mid">
+			</div>
+		</div>
+	</div>
+<div id="output"></div>
+    <div class="container">
+        <div class="title">
+            Geo IP Mapper
+        </div>
+        <div class="subtitle">
+            Locate Ip Addresses with google maps
+        </div>
+        <div class="midContainer">
+            <div class="map">
+
+            </div>
+			
+            <div class="button_set">
+                <form id="frm1">
+					<textarea name="ip" style="width: 236px; height: 200px;" placeholder="Enter IP addesses (line separated values) Example: 100.100.100.100"></textarea><br>
+				</form>
+				<button class="submit_button" onclick="myFunction()">> MAP IT <</button>
+				<a href="instructions.html" target="_blank">
+                    <div class="button" style="margin-right: 0px;">Instructions</div>
+                </a>
+                <a href="http://www.programmableweb.com/api/shinygeoip" target="_blank">
+                    <div class="button">Shinygeoip API</div>
+                </a>
+                <a href="http://www.programmableweb.com/api/google-maps" target="_blank">
+                    <div class="button" style="margin-right: 0px;">Google Maps API</div>
+                </a>
+                
+
+            </div>
+        </div>
+        <div class="note">
+            Developed By: <a href="http://github.com/alprocto/">Drew Proctor</a> & Blaise Mathai
+        </div>
+    </div>
+</body>
+
+</html>

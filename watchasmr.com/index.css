@@ -1,0 +1,186 @@
+html { 
+  //background: url(./skulls.png);
+  -webkit-background-size: tile;
+  -moz-background-size: tile;
+  -o-background-size: tile;
+  background-size: tile;
+  background: white;
+}
+
+body{
+	margin:0;
+	margin-left: auto;
+	margin-right: auto;
+	width: 1160px;
+	background: none;
+}
+
+.dim {
+  opacity:    0.8; 
+  background: #000; 
+  width:      100%;
+  height:     100%; 
+  z-index:    10;
+  top:        0; 
+  left:       0; 
+  position:   fixed;
+  pointer-events: none
+}
+
+.light {
+  opacity:    0.0; 
+  background: #000; 
+  width:      100%;
+  height:     100%; 
+  z-index:    10;
+  top:        0; 
+  left:       0; 
+  position:   fixed;
+  pointer-events: none
+}
+
+.nav-bar{
+	width: 100%;
+	height: 80px;
+	color: #558c75;
+	font-family: 'Indie Flower', cursive;
+	font-size: 30px;
+	text-align: center;
+	line-height: 80px;
+	margin-bottom: 40px;
+	border-bottom: 1px solid #eeeeee;
+}
+
+.nav-title{
+	width: 25%;
+	height: 80px;
+	color: #558c75;
+	font-family: 'Indie Flower', cursive;
+	font-size: 30px;
+	text-align: center;
+	line-height: 90px;
+	float:left;
+}
+
+.nav-button{
+	width: 25%;
+	height: 80px;
+	color: #111111;
+	font-family: 'ubuntu';
+	font-size: 15px;
+	text-align: center;
+	line-height: 90px;
+	float:left;
+	cursor: pointer;
+	-webkit-transition: background-color .3s, font-size .3s; /* Safari */
+    transition: background-color .3s, font-size .3s;
+}
+
+.li{
+	width: 288px;
+	height: 60px;
+	color: #111111;
+	font-family: 'ubuntu';
+	font-size: 15px;
+	text-align: center;
+	line-height: 60px;
+	cursor: pointer;
+	-webkit-transition: background-color .3s, font-size .3s; /* Safari */
+    transition: background-color .3s, font-size .3s;
+    padding:0;
+    margin:0;
+}
+
+.li:hover{
+	background-color:#eeeeee;
+}
+
+.about{
+	width: 576px;
+	right: 144px;
+	height: auto;
+	color: #111111;
+	font-family: 'ubuntu';
+	font-size: 15px;
+	text-align: center;
+	line-height: 30px;
+    padding:20px;
+}
+
+.about-title{
+	font-size: 18px;
+}
+
+.about-desc{
+	border-radius: 5px;
+	border: 1px solid #eeeeee;
+	padding: 10px;
+}
+
+.about-desc span{
+	color: #558c75;
+}
+
+a{
+	font-size: 60px;
+	color: #558c75;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+.nav-button:hover{
+	background-color: #558c75;
+	font-size: 17px;
+}
+
+.videos{
+	float: left;
+	margin: 10px;
+	margin-bottom: 40px;
+}
+
+iframe{
+	border-radius: 7px;
+	-webkit-box-shadow: 0px 0px 28px 6px rgba(0,0,0,0.53);
+-moz-box-shadow: 0px 0px 28px 6px rgba(0,0,0,0.53);
+box-shadow: 0px 0px 28px 6px rgba(0,0,0,0.53);
+}
+
+.actions{
+	margin-right: auto;
+	margin-left: auto;
+	margin-bottom: 40px;
+	width: 800px;
+	height: 50px;
+}
+
+.button{
+	float:left;
+	background-color: #558c75;
+	width: 200px;
+	height: 50px;
+	color: #ffffff;
+	font-family: 'ubuntu';
+	font-size: 15px;
+	text-align: center;
+	line-height: 50px;
+	border-radius: 5px;
+	cursor: pointer;
+	-webkit-transition: background-color .3s, font-size .3s; /* Safari */
+    transition: background-color .3s, font-size .3s;
+}
+
+.button:hover{
+	background-color: #111111;
+	font-size: 17px;
+}
+
+.contact_icon{
+	color: #558c75;
+	-webkit-transition: color .3s; /* Safari */
+    transition: color .3s;
+}
+
+.contact_icon:hover{
+	color: #111111;
+}
